@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', wordcountapp.views.home, name='home'),
     path('result/', wordcountapp.views.result, name='result'),
+    path('about/', wordcountapp.views.about, name='about')
 ]

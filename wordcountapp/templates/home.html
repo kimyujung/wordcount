@@ -3,13 +3,30 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <style>
+        @font-face { font-family: 'netmarbleB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'DOSMyungjo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff'); font-weight: normal; font-style: normal; }
+        h1  {
+            font-family: 'netmarbleB';
+        }
+        #submit {
+            font-family: 'DOSMyungjo';
+        }
+        body { text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-<h1>단어 세기</h1>
+    <a id=link href="{% url 'about' %}">ABOUT</a>
+    <h1>단어 세기</h1>
+
+    <div class=post>
+    <!--입력-->
     <form action="{% url 'result' %}">
         <textarea cols=40 rows=10 name=fulltext></textarea>
         <br>
-        <input type=submit value=count>
-        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <input id=submit class="btn btn-dark" type="submit" value="클릭!">
     </form>
+    </div>
 </body>

@@ -5,31 +5,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <style>
         @font-face { font-family: 'netmarbleB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff'); font-weight: normal; font-style: normal; }
-        @font-face { font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; }
         @font-face { font-family: 'GyeonggiTitleM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff'); font-weight: normal; font-style: normal; }
-        h1, h2  {
+        h1  {
             font-family: 'netmarbleB';
         }
         #writing    {
-            font-family: 'UhBeemysen';
+            font-family: 'GyeonggiTitleM';
             font-size: 30px;
         }
     </style>
 </head>
 <body>
-<a href="{% url 'home' %}">HOME</a>
+<a href="{%url 'home'%}">HOME</a>
 <center>
+<h1>About</h1>
 
-<h1>당신이 입력한 텍스트는 <span style="color:gold">{{ total }}</span>개의 단어로 구성되어 있습니다</h1>
-
-
-<br>
-<h2>입력한 텍스트</h2>
-<p id =writing>{{ full }}</p>
-
-<h2>단어 카운트</h2>
-{% for word, count in dictionary %}
-    <p id = writing>{{word}} : {{count}}개</p>
-{%endfor%}
+<p id=writing>단어를 세는 워드카운트 웹페이지</p>
 </center>
 </body>
